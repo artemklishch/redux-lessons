@@ -10,7 +10,7 @@ export default (state = stateStore, action) => {
     };
     case 'DELETEUSER': return {
       ...state,
-      usersList: state.usersList.filter(elem => !elem.id),
+      usersList: state.usersList.filter(elem => elem.id !== action.userId),
     };
     default: return state;
   };
