@@ -21,12 +21,8 @@ const counterReducer = (state = 0, action) => {
   };
 };
 
-const appStore = combineReducers({
-  counter: counterReducer,
-});
-
 export default createStore(
-  appStore,
+  counterReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && 
     window.__REDUX_DEVTOOLS_EXTENSION__()
   );
