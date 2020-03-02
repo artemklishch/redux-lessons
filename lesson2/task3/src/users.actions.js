@@ -1,5 +1,3 @@
-import store from './store.js';
-
 export const addUser = userData => {
  return {
     type: 'ADDUSER',
