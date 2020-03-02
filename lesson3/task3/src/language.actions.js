@@ -1,4 +1,4 @@
-export default (lang) => {
+export const setLanguage = (lang) => {
   return {
     type: 'lang',
     payload: {
