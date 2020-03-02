@@ -13,16 +13,22 @@ export const decrement = () => {
 };
 
 
-const counterReducer = (state = 0, action) => {
-  switch(action.type){
-    case 'COUNTER/INCREMENT': return state + 1;
-    case 'COUNTER/DECREMENT': return state - 1;
-    default: return state;
-  };
-};
+// const counterReducer = (state = 0, action) => {
+//   switch(action.type){
+//     case 'COUNTER/INCREMENT': return state + 1;
+//     case 'COUNTER/DECREMENT': return state - 1;
+//     default: return state;
+//   };
+// };
 
 export default createStore(
-  counterReducer,
+  (state = 0, action) => {
+    switch(action.type){
+      case 'COUNTER/INCREMENT': return state + 1;
+      case 'COUNTER/DECREMENT': return state - 1;
+      default: return state;
+    };
+  },
   window.__REDUX_DEVTOOLS_EXTENSION__ && 
     window.__REDUX_DEVTOOLS_EXTENSION__()
   );
