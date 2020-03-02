@@ -6,7 +6,7 @@ export default (state = stateStore, action) => {
   switch(action.type){
     case 'ADDUSER': return {
       ...state,
-      usersList: state.usersList.concat(action.user)
+      usersList: state.usersList.concat(action.userData)
     };
     case 'DELETEUSER': return {
       ...state,

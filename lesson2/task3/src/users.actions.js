@@ -1,13 +1,19 @@
-export const addUserAction = userData => {
-  return {
+import store from './store.js';
+
+export const addUser = userData => {
+ const action = {
     type: 'ADDUSER',
-    user: userData,
+    userData,
   };
+  store.dispatch(action);
+  return action;
 };
 
-export const deleteUserAction = id => {
-  return {
+export const deleteUser = userId => {
+  const action = {
     type: 'DELETEUSER',
-    userId: id,
+    userId,
   };
+  store.dispatch(action);
+  return action;
 };
