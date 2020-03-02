@@ -1,19 +1,15 @@
 import store from './store.js';
 
 export const addUser = userData => {
- const action = {
+ return {
     type: 'ADDUSER',
     userData,
   };
-  store.dispatch(action);
-  return action;
 };
 
 export const deleteUser = userId => {
-  const action = {
+  return {
     type: 'DELETEUSER',
     userId,
   };
-  store.dispatch(action);
-  return action;
 };
