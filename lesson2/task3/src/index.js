@@ -6,8 +6,9 @@ addUser({ id: 76, name: 'Sarah' });
 deleteUser(76);
 // console.log(store.getState());
 
-store.subscribe(() => 
-  console.log(store.getState())
+store.subscribe(() => {
+  const state = store.getState();
+  console.log(state);
   // const afterDelete = store.getState();
   // console.log(afterDelete);
-);
+});
