@@ -1,6 +1,6 @@
 import { USER_ADD, USER_DELETE, USER_UPDATE } from './store.js';
 
-export const userAdd = userData => {
+export const addUser = userData => {
   return {
     type: USER_ADD,
     payload: {
@@ -9,7 +9,7 @@ export const userAdd = userData => {
   };
 };
 
-export const userDelete = userId => {
+export const deleteUser = userId => {
   return {
     type: USER_DELETE,
     payload: {
@@ -18,7 +18,7 @@ export const userDelete = userId => {
   };
 };
 
-export const userUpdate = (userId, userData) => {
+export const updateUser = (userId, userData) => {
   return {
     type: USER_UPDATE,
     payload: {
