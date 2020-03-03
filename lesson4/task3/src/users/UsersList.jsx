@@ -3,6 +3,7 @@ import Pagination from './Pagination';
 import { connect } from 'react-redux';
 import { goPrev, goNext } from './users.actions'
 import { users } from './users.reducers';
+import User from './User';
 
 // class UsersList extends Component {
 //   goPrev = () => {
@@ -22,7 +23,8 @@ import { users } from './users.reducers';
 //   };
 // };
 const UsersList = ({ goPrev, goNext, currentPage, usersList }) => {
-    return (
+  return (
+    <div>
       <Pagination
         goPrev={goPrev}
         goNext={goNext}
@@ -30,7 +32,13 @@ const UsersList = ({ goPrev, goNext, currentPage, usersList }) => {
         totalItems={users.length}
         itemsPerPage={usersList.length}
       />
-    );
+      <ul className="users">
+        {usersList.map(user => {
+          <User user={user} />
+        })}
+      </ul>
+    </div>
+  );
 
 };
 
