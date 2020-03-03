@@ -5,23 +5,6 @@ import { goPrev, goNext } from './users.actions'
 import { users } from './users.reducers';
 import User from './User';
 
-// class UsersList extends Component {
-//   goPrev = () => {
-//     this.props.goPrev();
-//   };
-//   goNext = () => {
-//     this.props.goNext();
-//   };
-//   render() {
-//     console.log(this.props);
-//     return (
-//       <Pagination
-//         goPrev={this.goPrev}
-//         goNext={this.goNext}
-//       />
-//     );
-//   };
-// };
 const UsersList = ({ goPrev, goNext, currentPage, usersList }) => {
   return (
     <div>
@@ -33,13 +16,10 @@ const UsersList = ({ goPrev, goNext, currentPage, usersList }) => {
         itemsPerPage={usersList.length}
       />
       <ul className="users">
-        {usersList.map(user => {
-          <User key={user.id} {...user} />
-        })}
+        {usersList.map(user => <User key={user.id} {...user} />)}
       </ul>
     </div>
   );
-
 };
 
 const mapState = state => {
