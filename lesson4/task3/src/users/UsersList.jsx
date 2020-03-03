@@ -6,6 +6,7 @@ import { users } from './users.reducers';
 import User from './User';
 
 const UsersList = ({ goPrev, goNext, currentPage, usersList }) => {
+  const itemsPerPage = 3;
   return (
     <div>
       <Pagination
@@ -13,7 +14,7 @@ const UsersList = ({ goPrev, goNext, currentPage, usersList }) => {
         goNext={goNext}
         currentPage={currentPage}
         totalItems={users.length}
-        itemsPerPage={usersList.length}
+        itemsPerPage={itemsPerPage}
       />
       <ul className="users">
         {usersList.map(user => <User key={user.id} {...user} />)}
