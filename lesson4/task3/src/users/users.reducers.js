@@ -83,7 +83,7 @@ export default (state = usersState, action) => {
     switch (action.type) {
         case 'GO_NEXT': return {
             currentPage: state.currentPage + 1,
-            usersList: users.slice(start * itemsPerPage, start + 3)
+            usersList: users.slice(start, start + itemsPerPage)
         };
         case 'GO_PREV': return {
             currentPage: state.currentPage - 1,
