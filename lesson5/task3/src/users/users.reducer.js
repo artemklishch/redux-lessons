@@ -1,4 +1,4 @@
-
+import { VALUE } from './users.actions';
 
 const users = [
   {
@@ -65,6 +65,14 @@ const usersState = {
 
 export default (state = usersState, action) => {
   switch(action.type){
+    case VALUE: {
+        const text = action.payload.text.toLowerCase();
+        return {
+            filterText: text,
+            usersList: users.filter(user => 
+                user.name.toLowerCase().includes(text)),
+        };
+    }; 
     default: return state;
   };
 };

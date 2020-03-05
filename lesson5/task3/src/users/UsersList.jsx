@@ -2,23 +2,19 @@ import React from 'react';
 import Filter from '../Filter';
 import User from './User';
 import { connect } from 'react-redux';
+import { userName } from './users.actions';
+import { userFilterTextSelector, usersListSelector } from './users.selectors';
 
-const UsersList = ({filterText,usersList}) => {
+const UsersList = ({filterText, usersList, userName}) => {
   return (
     <div>
       <Filter
         filterText={filterText}
         count={usersList.length}
-        // onChange={}
+        onChange={userName}
       />
       <ul className="users">
-        {usersList.map(user => (
-          key=user.id, {...user}
-        ))}
-        <User
-          // name={}
-          // age={}
-        />
+        {usersList.map(user => <User key={user.id} {...user} /> )}
       </ul>
     </div>
   );
@@ -26,9 +22,9 @@ const UsersList = ({filterText,usersList}) => {
 
 const mapState = state => {
   return {
-    filterText: state.users.filterText,
-    usersList: state.users.usersList,
+    filterText: userFilterTextSelector(state),
+    usersList: usersListSelector(state),
   };
 };
-
-export default connect(mapState)(UsersList);
+const mapDispatch = { userName };
+export default connect(mapState, mapDispatch)(UsersList);

@@ -1,8 +1,8 @@
 export const VALUE = 'USER/VALUE';
 
-export const userName = text => {
+export const userName = event => {
   return {
     type: VALUE,
-    payload: {text},
+    payload: {text: event.target.value},
   };
 };
