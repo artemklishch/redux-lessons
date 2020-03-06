@@ -1,4 +1,4 @@
-import { getWeatherData } from './weather.gateway';
+import { getDataFromServer } from './weather.gateway';
 
 const baseUrl = 'https://5e5cf5eb97d2ea0014796f01.mockapi.io/api/v1/cities';
 
@@ -10,9 +10,9 @@ const getWeatherDataList = datalist => {
   };
 };
 
-export const getDataList = () => {
+export const getWeatherData = () => {
   return function(dispatch){
-    getWeatherData(baseUrl)
+    getDataFromServer(baseUrl)
       .then(weatherData => dispatch(getWeatherDataList(weatherData)));
   }
 };
