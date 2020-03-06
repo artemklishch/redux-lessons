@@ -5,17 +5,13 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 const App = () => {
-  console.log(store.getState());
   return (
+    <Provider store={store}>
     <div className="page">
-      <Provider store={store}>
-        {
-        store.getState().userData === null
-        ? <SearchField />
-        : (<UserInfo /> && <SearchField />)
-        }
-      </Provider>
+        <UserInfo />
+        <SearchField />
     </div>
+    </Provider>
   );
 };
 export default App;
