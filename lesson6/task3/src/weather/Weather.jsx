@@ -5,7 +5,7 @@ import { getWeatherData } from './weather.actions';
 
 class Weather extends Component {
   componentDidMount() {
-    this.props.getDataList();
+    this.props.getWeatherData();
   }
   render() {
     return (
