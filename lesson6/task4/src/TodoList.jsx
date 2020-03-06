@@ -27,7 +27,6 @@ class TodoList extends Component {
 
 TasksList.propTypes = {
   tasks: PropTypes.arrayOf(PropTypes.shape()),
-  // getTasksLists: PropTypes.func.isRequired,
   onCreateCertainTask: PropTypes.func.isRequired,
   handleTaskOnChange: PropTypes.func.isRequired,
   handleTaskDelete: PropTypes.func.isRequired,
