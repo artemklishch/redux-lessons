@@ -27,5 +27,4 @@ Task.propTypes = {
 };
 Task.defaultProps = {
   text: '',
-  done: false,
 };

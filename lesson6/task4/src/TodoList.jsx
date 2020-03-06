@@ -1,5 +1,5 @@
 import React from 'react';
-import TasksList from './TasksList';
+import TasksList from './tasks/TasksList';
 
 const TodoList = () => {
   return (

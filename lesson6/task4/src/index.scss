@@ -7,7 +7,7 @@ body {
 }
 
 .title {
-  font-size: 35px;
+  font-size: 24px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -16,9 +16,9 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 32px;
-  background: linear-gradient(to right, #101112, #36597f);
-  border-radius: 10px;
-  padding: 10px;
+  background-color: coral;
+  border-radius: 8px;
+  padding: 8px;
   max-width: 600px;
   margin: auto;
 }
@@ -35,8 +35,8 @@ body {
   display: flex;
   align-items: center;
   height: 40px;
-  border-radius: 30px;
-  background-color: #ebf0f6;
+  border-radius: 8px;
+  background-color: wheat;
   margin-bottom: 8px;
   padding: 8px;
 
@@ -45,7 +45,8 @@ body {
   }
 
   &_done {
-      opacity: 0.5;
+      opacity: 0.7;
+
       .list-item__text {
           text-decoration: line-through;
       }
@@ -86,9 +87,6 @@ body {
   cursor: pointer;
   border-radius: 8px;
   margin-left: 16px;
-  background-color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 .create-task {
@@ -100,6 +98,5 @@ body {
       border: 3px solid #ccc;
       border-radius: 8px;
       flex: 1;
-      outline: none;
   }
 }
