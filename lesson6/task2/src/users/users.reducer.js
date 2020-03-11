@@ -16,7 +16,7 @@ export default (state = usersState, action) => {
         ...state,
         userData: user,
       };
-    } 
+    }; 
     default: return state;
   };
 };
