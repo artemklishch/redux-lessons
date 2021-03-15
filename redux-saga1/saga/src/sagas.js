@@ -7,7 +7,8 @@ function fetchData() {
   ).then((response) => response.json());
 }
 
-function* workerLoadData() {
+function* workerLoadData(action) {
+  console.log(action);
   const data = yield call(fetchData);
   yield put(putData(data));
 }
